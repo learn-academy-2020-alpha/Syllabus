@@ -98,5 +98,5 @@ The View for :show is JBuilder:
 ```ruby
 json.id @user.id
 json.name @user.name
-json.avatar_url url_for(@user.avatar)
+json.avatar_url polymorphic_url(@user.avatar) if @user.avatar.attached?
 ```
