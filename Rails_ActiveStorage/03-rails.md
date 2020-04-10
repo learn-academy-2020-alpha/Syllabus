@@ -81,6 +81,9 @@ For our controller, we need to setup an endpoint that will accept an update with
 
 ```ruby
 class UsersController < ApplicationController
+    def index
+      @users = User.all
+    end
 
     def update
         @user = User.find(params[:id]) #probably would be current_user for you
@@ -100,3 +103,11 @@ json.id @user.id
 json.name @user.name
 json.avatar_url polymorphic_url(@user.avatar) if @user.avatar.attached?
 ```
+
+The View for :index needs to be updated as well so that we show the image there:
+```
+json.array! @users do |user|
+  json.id user.id
+  json.name user.name
+  json.avatar_url polymorphic_url(user.avatar) if user.avatar.attached?
+end
