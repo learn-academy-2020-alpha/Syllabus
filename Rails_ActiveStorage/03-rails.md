@@ -105,7 +105,7 @@ json.avatar_url polymorphic_url(@user.avatar) if @user.avatar.attached?
 ```
 
 The View for :index needs to be updated as well so that we show the image there:
-```
+```ruby
 json.array! @users do |user|
   json.id user.id
   json.name user.name
