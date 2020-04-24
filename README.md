@@ -166,3 +166,4 @@ Additional Topics:
 
 ## Unit Twelve: Internship Preparation
 1. [React Native](./react_native/01_expo.md)
+2. <a href="https://github.com/LEARNAcademy/basic-algorithms">Basic JS Algorithms</a>
