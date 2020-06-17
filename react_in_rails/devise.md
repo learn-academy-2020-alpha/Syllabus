@@ -43,7 +43,7 @@ Devise will create some helpers to use inside your controllers and views. To set
 ### Add a resource
 
 ```
-- $ rails generate resource Bike brand:string model_year:integer model:string user_id:integer
+- $ rails generate scaffold Bike brand:string model_year:integer model:string user_id:integer
 - $ rails db:migrate
 ```
 
